@@ -80,8 +80,7 @@
 				B18F9A011AE7CB9900C401D7 /* AppDelegate.swift */,
 				B18F9A031AE7CB9900C401D7 /* ViewController.swift */,
 				B18F9A051AE7CB9900C401D7 /* Main.storyboard */,
-				B18F9A081AE7CB9900C401D7 /* Images.xcassets */,
-				B18F9A0A1AE7CB9900C401D7 /* LaunchScreen.xib */,
+				B18F9A001AE7CB9900C401D7 /* Info.plist */,
 				B18F99FF1AE7CB9900C401D7 /* Supporting Files */,
 			);
 			path = Trax;
@@ -90,7 +89,8 @@
 		B18F99FF1AE7CB9900C401D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B18F9A001AE7CB9900C401D7 /* Info.plist */,
+				B18F9A081AE7CB9900C401D7 /* Images.xcassets */,
+				B18F9A0A1AE7CB9900C401D7 /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -411,6 +411,7 @@
 				B18F9A1D1AE7CB9900C401D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B18F9A1E1AE7CB9900C401D7 /* Build configuration list for PBXNativeTarget "TraxTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				B18F9A201AE7CB9900C401D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
