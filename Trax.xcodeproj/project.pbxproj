@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B18F9A021AE7CB9900C401D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F9A011AE7CB9900C401D7 /* AppDelegate.swift */; };
-		B18F9A041AE7CB9900C401D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F9A031AE7CB9900C401D7 /* ViewController.swift */; };
+		B18F9A041AE7CB9900C401D7 /* GPXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F9A031AE7CB9900C401D7 /* GPXViewController.swift */; };
 		B18F9A071AE7CB9900C401D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18F9A051AE7CB9900C401D7 /* Main.storyboard */; };
 		B18F9A091AE7CB9900C401D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18F9A081AE7CB9900C401D7 /* Images.xcassets */; };
 		B18F9A0C1AE7CB9900C401D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B18F9A0A1AE7CB9900C401D7 /* LaunchScreen.xib */; };
 		B18F9A181AE7CB9900C401D7 /* TraxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F9A171AE7CB9900C401D7 /* TraxTests.swift */; };
+		B1DC751A1AF67F6700764FDB /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC75191AF67F6700764FDB /* GPX.swift */; };
+		B1DC751C1AF6C6E300764FDB /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC751B1AF6C6E300764FDB /* MKGPX.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		B18F99FC1AE7CB9900C401D7 /* Trax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18F9A001AE7CB9900C401D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B18F9A011AE7CB9900C401D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B18F9A031AE7CB9900C401D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B18F9A031AE7CB9900C401D7 /* GPXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXViewController.swift; sourceTree = "<group>"; };
 		B18F9A061AE7CB9900C401D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B18F9A081AE7CB9900C401D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B18F9A0B1AE7CB9900C401D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B18F9A111AE7CB9900C401D7 /* TraxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18F9A161AE7CB9900C401D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B18F9A171AE7CB9900C401D7 /* TraxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraxTests.swift; sourceTree = "<group>"; };
+		B1DC75191AF67F6700764FDB /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
+		B1DC751B1AF6C6E300764FDB /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				B18F9A011AE7CB9900C401D7 /* AppDelegate.swift */,
-				B18F9A031AE7CB9900C401D7 /* ViewController.swift */,
+				B1DC751B1AF6C6E300764FDB /* MKGPX.swift */,
+				B18F9A031AE7CB9900C401D7 /* GPXViewController.swift */,
 				B18F9A051AE7CB9900C401D7 /* Main.storyboard */,
 				B18F9A001AE7CB9900C401D7 /* Info.plist */,
 				B18F99FF1AE7CB9900C401D7 /* Supporting Files */,
@@ -89,6 +94,7 @@
 		B18F99FF1AE7CB9900C401D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B1DC75191AF67F6700764FDB /* GPX.swift */,
 				B18F9A081AE7CB9900C401D7 /* Images.xcassets */,
 				B18F9A0A1AE7CB9900C401D7 /* LaunchScreen.xib */,
 			);
@@ -212,8 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B18F9A041AE7CB9900C401D7 /* ViewController.swift in Sources */,
+				B18F9A041AE7CB9900C401D7 /* GPXViewController.swift in Sources */,
+				B1DC751C1AF6C6E300764FDB /* MKGPX.swift in Sources */,
 				B18F9A021AE7CB9900C401D7 /* AppDelegate.swift in Sources */,
+				B1DC751A1AF67F6700764FDB /* GPX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

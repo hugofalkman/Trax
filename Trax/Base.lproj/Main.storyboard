@@ -2,13 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GPXViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GPXViewController" id="BYZ-38-t0r" customClass="GPXViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,27 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5f1-fZ-l23">
-                                <rect key="frame" x="16" y="28" width="568" height="572"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-K9-BHh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="5f1-fZ-l23" secondAttribute="bottom" id="Czt-2h-sBY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5f1-fZ-l23" secondAttribute="trailing" id="Ofb-WL-FJK"/>
-                            <constraint firstItem="5f1-fZ-l23" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a4v-4w-l9M"/>
-                            <constraint firstItem="5f1-fZ-l23" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="eMt-C5-ovs"/>
+                            <constraint firstAttribute="trailing" secondItem="SfQ-K9-BHh" secondAttribute="trailing" id="7tM-Na-xAd"/>
+                            <constraint firstItem="SfQ-K9-BHh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uyf-U7-GNG"/>
+                            <constraint firstItem="SfQ-K9-BHh" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="vG7-7k-GHc"/>
+                            <constraint firstItem="SfQ-K9-BHh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vPR-fP-giT"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="5f1-fZ-l23" id="97m-F7-r36"/>
+                        <outlet property="mapView" destination="SfQ-K9-BHh" id="7aA-AA-l3X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="188" y="359"/>
         </scene>
     </scenes>
 </document>
