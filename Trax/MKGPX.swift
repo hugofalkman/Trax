@@ -22,5 +22,15 @@ extension GPX.Waypoint: MKAnnotation {
     
     // MARK: - Links to Images
     
+    var thumbnailURL: NSURL? { return getImageURLofType("thumbnail") }
+    var imageURL: NSURL? { return getImageURLofType("large") }
     
+    private func getImageURLofType(type: String) -> NSURL? {
+        for link in links {
+            if link.type == type {
+                return link.url
+            }
+        }
+        return nil
+    }
 }
