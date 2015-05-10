@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13C26FB1AFFA69600C013A9 /* EditWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13C26FA1AFFA69600C013A9 /* EditWaypointViewController.swift */; };
 		B18F9A021AE7CB9900C401D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F9A011AE7CB9900C401D7 /* AppDelegate.swift */; };
 		B18F9A041AE7CB9900C401D7 /* GPXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F9A031AE7CB9900C401D7 /* GPXViewController.swift */; };
 		B18F9A071AE7CB9900C401D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18F9A051AE7CB9900C401D7 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B13C26FA1AFFA69600C013A9 /* EditWaypointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWaypointViewController.swift; sourceTree = "<group>"; };
 		B18F99FC1AE7CB9900C401D7 /* Trax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18F9A001AE7CB9900C401D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B18F9A011AE7CB9900C401D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,9 +88,9 @@
 				B18F9A011AE7CB9900C401D7 /* AppDelegate.swift */,
 				B1DC751B1AF6C6E300764FDB /* MKGPX.swift */,
 				B18F9A031AE7CB9900C401D7 /* GPXViewController.swift */,
+				B13C26FA1AFFA69600C013A9 /* EditWaypointViewController.swift */,
 				B1DC751D1AF76C4200764FDB /* ImageViewController.swift */,
 				B18F9A051AE7CB9900C401D7 /* Main.storyboard */,
-				B18F9A001AE7CB9900C401D7 /* Info.plist */,
 				B18F99FF1AE7CB9900C401D7 /* Supporting Files */,
 			);
 			path = Trax;
@@ -99,6 +101,7 @@
 			children = (
 				B1DC75191AF67F6700764FDB /* GPX.swift */,
 				B18F9A081AE7CB9900C401D7 /* Images.xcassets */,
+				B18F9A001AE7CB9900C401D7 /* Info.plist */,
 				B18F9A0A1AE7CB9900C401D7 /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
@@ -223,6 +226,7 @@
 			files = (
 				B18F9A041AE7CB9900C401D7 /* GPXViewController.swift in Sources */,
 				B1DC751C1AF6C6E300764FDB /* MKGPX.swift in Sources */,
+				B13C26FB1AFFA69600C013A9 /* EditWaypointViewController.swift in Sources */,
 				B1DC751E1AF76C4200764FDB /* ImageViewController.swift in Sources */,
 				B18F9A021AE7CB9900C401D7 /* AppDelegate.swift in Sources */,
 				B1DC751A1AF67F6700764FDB /* GPX.swift in Sources */,
