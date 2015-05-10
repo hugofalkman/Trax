@@ -37,7 +37,9 @@
                     <connections>
                         <outlet property="mapView" destination="SfQ-K9-BHh" id="7aA-AA-l3X"/>
                         <segue destination="OIM-yW-FdI" kind="show" identifier="Show Image" id="UPG-6U-gqN"/>
-                        <segue destination="tPZ-Qu-fQt" kind="presentation" identifier="Edit Waypoint" id="4RV-ZT-bsa"/>
+                        <segue destination="9xt-ZC-Hma" kind="popoverPresentation" identifier="Edit Waypoint" popoverAnchorView="SfQ-K9-BHh" id="kWm-2e-QDH">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -84,7 +86,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aip-Py-Nyg" firstAttribute="top" secondItem="Vnb-JA-Jun" secondAttribute="bottom" constant="8" symbolic="YES" id="73A-UO-p25"/>
                             <constraint firstItem="Vnb-JA-Jun" firstAttribute="leading" secondItem="hm1-Vj-Yyh" secondAttribute="trailing" constant="8" symbolic="YES" id="7jX-8T-Wei"/>
@@ -114,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LG-OU-mW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="-357"/>
+            <point key="canvasLocation" x="1621" y="-356"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="SKK-IF-b6S">
@@ -152,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKf-yT-Hbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="359"/>
+            <point key="canvasLocation" x="1621" y="359"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Ms-Ph-T3q">
@@ -175,7 +176,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RGP-vt-RDI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tPZ-Qu-fQt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavConId" automaticallyAdjustsScrollViewInsets="NO" id="tPZ-Qu-fQt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CLa-ur-4CC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -188,7 +189,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jx-vV-scx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-357"/>
+            <point key="canvasLocation" x="912" y="-356"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4JM-ra-Gex"/>
+    </inferredMetricsTieBreakers>
 </document>
