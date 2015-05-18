@@ -69,7 +69,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aip-Py-Nyg">
-                                <rect key="frame" x="70" y="110" width="514" height="30"/>
+                                <rect key="frame" x="70" y="110" width="468" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -85,6 +85,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lvh-Yk-3OD">
+                                <rect key="frame" x="16" y="148" width="568" height="444"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svy-lt-Uhd">
+                                <rect key="frame" x="546" y="110" width="38" height="30"/>
+                                <state key="normal" image="Camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto" destination="9xt-ZC-Hma" eventType="touchUpInside" id="Lsu-kZ-m0I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="aip-Py-Nyg" firstAttribute="top" secondItem="Vnb-JA-Jun" secondAttribute="bottom" constant="8" symbolic="YES" id="73A-UO-p25"/>
@@ -93,12 +105,17 @@
                             <constraint firstItem="hm1-Vj-Yyh" firstAttribute="leading" secondItem="a28-vE-Att" secondAttribute="leadingMargin" id="FIF-FZ-hAg"/>
                             <constraint firstItem="uwP-0X-y9n" firstAttribute="leading" secondItem="a28-vE-Att" secondAttribute="leadingMargin" id="Fd4-Zs-3EO"/>
                             <constraint firstItem="Vnb-JA-Jun" firstAttribute="trailing" secondItem="a28-vE-Att" secondAttribute="trailingMargin" id="HIb-do-e0W"/>
+                            <constraint firstItem="Svy-lt-Uhd" firstAttribute="leading" secondItem="aip-Py-Nyg" secondAttribute="trailing" constant="8" symbolic="YES" id="QGC-RD-bMG"/>
+                            <constraint firstItem="Svy-lt-Uhd" firstAttribute="trailing" secondItem="a28-vE-Att" secondAttribute="trailingMargin" id="RJ4-Cw-sKF"/>
                             <constraint firstItem="Vnb-JA-Jun" firstAttribute="top" secondItem="kSo-Jq-PGz" secondAttribute="bottom" constant="8" symbolic="YES" id="UqR-br-ILv"/>
-                            <constraint firstItem="PBd-RO-tgT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aip-Py-Nyg" secondAttribute="bottom" constant="8" symbolic="YES" id="X9j-ct-XPE"/>
                             <constraint firstItem="aip-Py-Nyg" firstAttribute="leading" secondItem="uwP-0X-y9n" secondAttribute="trailing" constant="8" symbolic="YES" id="bsj-Ow-ffE"/>
+                            <constraint firstItem="lvh-Yk-3OD" firstAttribute="top" secondItem="aip-Py-Nyg" secondAttribute="bottom" constant="8" symbolic="YES" id="jFr-Y6-zKy"/>
                             <constraint firstItem="Vnb-JA-Jun" firstAttribute="baseline" secondItem="hm1-Vj-Yyh" secondAttribute="baseline" constant="-1" id="kZJ-aB-rP7"/>
+                            <constraint firstItem="PBd-RO-tgT" firstAttribute="top" secondItem="lvh-Yk-3OD" secondAttribute="bottom" constant="8" symbolic="YES" id="kwq-W7-FYr"/>
+                            <constraint firstItem="aip-Py-Nyg" firstAttribute="centerY" secondItem="Svy-lt-Uhd" secondAttribute="centerY" id="nrU-vg-BLy"/>
+                            <constraint firstItem="lvh-Yk-3OD" firstAttribute="trailing" secondItem="a28-vE-Att" secondAttribute="trailingMargin" id="nxF-zu-ecp"/>
                             <constraint firstItem="aip-Py-Nyg" firstAttribute="baseline" secondItem="uwP-0X-y9n" secondAttribute="baseline" constant="-1" id="ud6-4p-jPV"/>
-                            <constraint firstItem="aip-Py-Nyg" firstAttribute="trailing" secondItem="a28-vE-Att" secondAttribute="trailingMargin" id="v0U-QM-tCe"/>
+                            <constraint firstItem="lvh-Yk-3OD" firstAttribute="leading" secondItem="a28-vE-Att" secondAttribute="leadingMargin" id="uhc-29-kjQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Waypoint" id="l5o-Ce-3CV">
@@ -109,6 +126,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageViewContainer" destination="lvh-Yk-3OD" id="s1I-O3-fTj"/>
                         <outlet property="infoTextField" destination="aip-Py-Nyg" id="7Om-ci-DJ5"/>
                         <outlet property="nameTextField" destination="Vnb-JA-Jun" id="88s-o9-9k0"/>
                     </connections>
@@ -192,6 +210,9 @@
             <point key="canvasLocation" x="912" y="-356"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="38" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4JM-ra-Gex"/>
     </inferredMetricsTieBreakers>
