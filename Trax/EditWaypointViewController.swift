@@ -75,11 +75,29 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate, UIImage
         }
         imageView.image = image
         makeRoomForImage()
+        saveImageInWaypoint()
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func saveImageInWaypoint() {
+        if let image = imageView.image {
+            if let imageData = UIImageJPEGRepresentation(image, 1.0) {
+                let fileManager = NSFileManager()
+                if let docsDir = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first as? NSURL {
+                    let unique = NSDate.timeIntervalSinceReferenceDate()
+                    let url = docsDir.URLByAppendingPathComponent("\(unique).jpg")
+                    if let path = url.absoluteString {
+                        if imageData.writeToURL(url, atomically: true) {
+                            waypointToEdit?.links = [GPX.Link(href: path)]
+                        }
+                    }
+                }
+            }
+        }
     }
     
     // MARK: - Text Fields
